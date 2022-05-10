@@ -1,25 +1,20 @@
 A System
 A combination of software and hardware that provides a solution for a business problem
-
+Involves: 
+The client (the request and $)
+Analysts
 The Software Development Process
 Creating high-quality software involves organization, planning and utilizing various diagrammatic conventions 
 Computer scientists have created a view of the software development process known as the ‘software development life cycle’ (SDLC) 
 One method is known as the ‘waterfall model’ 
 A mistake made in one phase often requires the developer to backup and redo some of the work in the previous phase
-
 The Waterfall Model
 Developed by Dr Winston Royce in 1970 based on his experience developing software for spacecraft mission planning
 The Waterfall Model consists of several phases: 
 Problem Statement
-Analysis 
-Design 
-Implementation 
-Integration /Test
-Maintenance 
-
+Analysis
 Gantt Chart
 Developed by mechanical engineer Henry Gantt in the 1910’s
 Tool typically used by people working on a large project
 Hoover Dam
 Eisenhower National Defense Interstate Highway System
-Helps project managers to visualize, schedule, and track scheduled as well as actual progress of projects

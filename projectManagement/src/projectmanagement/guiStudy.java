@@ -1,27 +1,24 @@
 /* Christopher and Curtis
 * May. 9, 2022
 * The GUI for the study materials */
-
 package projectmanagement;
 
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Scanner;
 
-
 public class guiStudy extends javax.swing.JFrame {
 
-    guiMainMenu firstWindow; 
-   
+    guiMainMenu firstWindow;
+    String[] notes = new String[4];
+
     public guiStudy(guiMainMenu m) {
         initComponents();
-        
-        firstWindow = m;
-        
-        
-        
-    }
 
+        firstWindow = m;
+        loadArray();
+
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -131,57 +128,61 @@ public class guiStudy extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
-        
+
         firstWindow.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_btnMainActionPerformed
 
     private void btnChartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChartActionPerformed
-        // TODO add your handling code here:
+        txtaNotes.setText(notes[3]);
     }//GEN-LAST:event_btnChartActionPerformed
 
     private void btnModelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModelActionPerformed
-        // TODO add your handling code here:
+        txtaNotes.setText(notes[2]);
     }//GEN-LAST:event_btnModelActionPerformed
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
-        // TODO add your handling code here:
+        txtaNotes.setText(notes[1]);
     }//GEN-LAST:event_btnProcessActionPerformed
 
     private void btnSystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSystemActionPerformed
-        // TODO add your handling code here:
+        txtaNotes.setText(notes[0]);
     }//GEN-LAST:event_btnSystemActionPerformed
 
     public void loadArray() {
-        
+        String chart = "";
+
         try {
-            
+
             //Instantiates the file and scanner object
             File f = new File("src/projectmanagement/studyNotes");
             Scanner s = new Scanner(f);
-            
-            
-            
-            
-            
-            
+
+            //Loops 4 times for every topic
+            for (int i = 0; i < 4; i++) {
+
+                //Loops 5 times for each line for the topic
+                for (int a = 0; a < 5; a++) {
+
+                    chart += s.nextLine(); //Adds the next line to the chart
+                    chart += "\n"; //Adds another line for formatting
+
+                }
+
+                notes[i] = chart; //Adds the chart into the array
+                chart = ""; //Resets the chart
+
+            }
+
         } catch (FileNotFoundException e) {
-            
+
             System.out.println("Error: " + e); //Prints an error message
-            
+
         }
-        
-        
-        
-        
-        
-        
+
     }
-    
-    
-    
-   
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnChart;
