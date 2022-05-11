@@ -1,25 +1,19 @@
 /* Christopher and Curtis
 * May. 9, 2022
 * The GUI for the main menu */
-
 package projectmanagement;
-
 
 public class guiMainMenu extends javax.swing.JFrame {
 
     private guiStudy otherWindow;
     private guiQuiz otherWindow1;
     private guiResult otherWindow2;
-    
+
     public guiMainMenu() {
         initComponents();
-        
-        
-        
-        
+
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -91,49 +85,44 @@ public class guiMainMenu extends javax.swing.JFrame {
 
     private void btnStudyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudyActionPerformed
         //Checks if the study material window has already been created
-        
+
         if (otherWindow == null) {
-            
-            otherWindow = new  guiStudy(this);
-            
+
+            otherWindow = new guiStudy(this);
+
         }
-        
+
         //Sets the other window to be visible
         otherWindow.setVisible(true);
-        
+
         //Hides the main menu window
         this.setVisible(false);
-        
-        
-        
+
+
     }//GEN-LAST:event_btnStudyActionPerformed
 
     private void btnQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuizActionPerformed
-        
+
         //Checks if the quiz window has already been created
-        
         if (otherWindow1 == null) {
-            
-            otherWindow1 = new  guiQuiz(this);
-            
+
+            otherWindow1 = new guiQuiz(this);
+
         }
-        
+
         //Sets the other window to be visible
         otherWindow1.setVisible(true);
-        
+
         //Hides the main menu window
         this.setVisible(false);
-        
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_btnQuizActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        
+
         System.exit(0); //Exits the system
-        
+
     }//GEN-LAST:event_btnExitActionPerformed
 
     /**
