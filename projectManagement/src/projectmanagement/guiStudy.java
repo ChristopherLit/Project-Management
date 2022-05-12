@@ -151,6 +151,7 @@ public class guiStudy extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSystemActionPerformed
 
     public void loadArray() {
+        //Declaring the variables
         String chart = "";
 
         try {

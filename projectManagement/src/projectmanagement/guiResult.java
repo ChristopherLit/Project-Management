@@ -3,17 +3,17 @@
 * The GUI for the results from the quiz */
 package projectmanagement;
 
-
 public class guiResult extends javax.swing.JFrame {
 
     guiMainMenu firstWindow;
 
-    public guiResult(guiMainMenu m) {
+    public guiResult(guiMainMenu m, int totalCorrect) {
         initComponents();
-        
+
         firstWindow = m;
- 
-        
+
+        //Runs the score method to display the users score and feedback
+        score(totalCorrect);
     }
 
     @SuppressWarnings("unchecked")
@@ -73,14 +73,39 @@ public class guiResult extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainActionPerformed
-        
+
         firstWindow.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_btnMainActionPerformed
 
+    /**
+     * Displays the results to the user
+     */
+    public void score(int totalCorrect) {
+        //Declaring the variables
+        String chart = "Your score is: " + totalCorrect + "/10\n";
 
+        //If the score is less than or equal to 5
+        if (totalCorrect <= 5) {
 
+            //Displays the score and tells the user to review more
+            txta.setText(chart + "You need to study more. I would recommend reviewing the study material");
+
+            //If the score is greater than 5 and less than 10
+        } else if (totalCorrect > 5 && totalCorrect < 10) {
+
+            //Displays the score and tells the user that they did well, but to still review more
+            txta.setText(chart + "You did well, I would still recommend reviewing the study material to improve your score.");
+            
+            //The user got a perfect score - 10/10
+        } else {
+
+            //Tells the user that they're in good shape for the test
+            txta.setText(chart + "You're in great shape for the test!");
+        }
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMain;
     private javax.swing.JScrollPane jScrollPane1;

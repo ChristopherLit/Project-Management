@@ -4,7 +4,8 @@
 package projectmanagement;
 
 public class guiMainMenu extends javax.swing.JFrame {
-
+    
+    //Declaring the global variables
     private guiStudy otherWindow;
     private guiQuiz otherWindow1;
     private guiResult otherWindow2;
@@ -150,6 +151,10 @@ public class guiMainMenu extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(guiMainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
